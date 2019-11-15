@@ -1,0 +1,257 @@
+# everything in root except for these things
+/(?!(^windows|^[$]windows.*|^[$]mft|^boot|^users|^intel|^dell|^esd|^msocache|^drivers|^recovery|^pastel.*|^program.+)).*
+# File system metadata files.
+/[$]logfile
+/[$]extend/[$]usnjrnl
+# Boot logs
+/boot/bcd.*
+# Recycle Bin and Recycler.
+/[$]recycle.*
+/recycler.*
+# Windows Registry files.
+/(users|documents and settings)/.+/ntuser[.]dat.*
+/users/.+/appdata/local/microsoft/windows/usrclass[.]dat.*
+/users/.+/local settings/application data/microsoft/windows/usrclass.dat.*
+/documents and settings/.+/local settings/application data/microsoft/windows/usrclass[.]dat.*
+/windows.*/system32/config/(sam|software|security|system|system1).*
+/windows.*/system32/config/regback/(sam|software|security|system|system1).*
+/windows.*/serviceprofiles/localservice/ntuser.*
+/windows.*/serviceprofiles/networkservice/ntuser.*
+/system volume information/syscache.hve
+/winnt/profiles/.+
+# Recent file activity.
+/users/.+/appdata/roaming/microsoft/windows/recent/.+[.]lnk
+/users/.+/appdata/roaming/microsoft/office/recent/.+[.]lnk
+/documents and settings/.+/recent/.+[.]lnk
+/documents and settings/.+/desktop/.+[.]lnk
+/users/.+/desktop/.+[.]lnk
+# Jump List files.
+/users/.+/appdata/roaming/microsoft/windows/recent/automaticdestinations/.+[.]automaticdestinations-ms
+/users/.+/appdata/roaming/microsoft/windows/recent/customdestinations/.+[.].customdestinations-ms
+# RDP cache
+/users/.+/appdata/local/microsoft/terminal server client/cache.*
+/documents and settings/.+/local settings/application data/microsoft/terminal server client/cache.*
+# Windows Event Logs.
+/windows.*/system32/config/.+[.]evt
+/windows.*/system32/winevt/logs/.+
+# Various log files.
+/windows.*/inf/setupapi[.].+[.]log
+/windows.*/setupapi.log
+/windows.*/system32/logfiles/.+/.+[.]txt
+# WindowsTempDirectories
+/windows.*/temp/.+
+/temp/.+
+/tmp/.+
+/users/.+/appdata/local/temp/.+
+# Windows artifacts.
+/windows.*/logs/.+
+/windows.*/schedlgu.txt
+/windows.*/system32/tasks.+
+/windows.*/tasks/.+
+/windows.*/syswow64/tasks/.+
+/windows.*/appcompat/programs/recentfilecache[.]bcf
+/windows.*/appcompat/programs/amcache[.]hve.*
+/windows.*/appcompat/programs/encapsulationlogging.*
+/windows.*/system32/wdi/logfiles/.+.etl.*
+/windows.*/system32/wdi.*
+/windows.*/system32/logfiles/wmi/.*
+/windows.*/system32/sleepstudy.*
+/windows.*/programdata/microsoft/windows/powerefficiency diagnostics/energy-ntkl[].]etl
+/windows.*/apppatch/custom/.+sdb
+/windows.*/apppatch/custom/custom64/.+sdb
+/programdata/microsoft/windows/wer.*
+/users/.+/appdata/local/crashdumps/.+dmp
+/windows.*/.+dmp
+/windows.*/system32/logfiles/firewall/.*
+/programdata/microsoft/search/data/applications/windows/windows.edb
+/users/.+/appdata/local/microsoft/windows/notifications/.+
+# WindowsBITSQueueManagerDatabases
+/programdata/microsoft/network/downloader/qmgr*.dat
+# Windows activities cache SQLite database
+/users/.+/appdata/local/connecteddevicesplatform/l[.].+/.+
+# Prefetch files.
+/windows.*/prefetch/.+
+# Browser history artifacts.
+/documents and settings/.+/application data/microsoft/internet explorer/userdata/index.dat
+/documents and settings/.+/application data/microsoft/office/recent/index.dat
+/documents and settings/.+/application data/mozilla/firefox/profiles/.+/.+[.]sqlite
+/documents and settings/.+/cookies/index[.]dat
+/documents and settings/.+/local settings/application data/google/chrome/.+
+/documents and settings/.+/local settings/history/history.ie5/.+/index.dat
+/documents and settings/.+/local settings/history/history.ie5/index[.]dat
+/documents and settings/.+/local settings/history/history.ie5/mshist.+/index[.]dat
+/documents and settings/.+/local settings/temporary internet files/content.ie5/index[.]dat
+/users/.+/appdata/local/google/chrome/user data/.+/bookmarks.*
+/users/.+/appdata/local/google/chrome/user data/.+/cookies.*
+/users/.+/appdata/local/google/chrome/user data/.+/current session.*
+/users/.+/appdata/local/google/chrome/user data/.+/current tabs.*
+/users/.+/appdata/local/google/chrome/user data/.+/extensions.*
+/users/.+/appdata/local/google/chrome/user data/.+/favicons.*
+/users/.+/appdata/local/google/chrome/user data/.+/history.*
+/users/.+/appdata/local/google/chrome/user data/.+/last session.*
+/users/.+/appdata/local/google/chrome/user data/.+/last tabs.*
+/users/.+/appdata/local/google/chrome/user data/.+/preferences.*
+/users/.+/appdata/local/google/chrome/user data/.+/shortcuts.*
+/users/.+/appdata/local/google/chrome/user data/.+/top sites.*
+/users/.+/appdata/local/google/chrome/user data/.+/visited links.*
+/users/.+/appdata/local/google/chrome/user data/.+/web data.*
+/users/.+/appdata/local/microsoft/internet explorer/.+
+/users/.+/appdata/local/microsoft/internet explorer/recovery/.+/.+[.]dat
+/users/.+/appdata/local/microsoft/internet explorer/recovery/immersive/.+/.+[.]dat
+/users/.+/appdata/local/microsoft/windows/cookies/.+
+/users/.+/appdata/local/microsoft/windows/history/.+
+/users/.+/appdata/local/microsoft/windows/history/history.ie5/index[.]dat
+/users/.+/appdata/local/microsoft/windows/history/history.ie5/mshist.+/index[.]dat
+/users/.+/appdata/local/microsoft/windows/history/low/history.ie5/index[.]dat
+/users/.+/appdata/local/microsoft/windows/history/low/history.ie5/mshist.+/index[.]dat
+/users/.+/appdata/local/microsoft/windows/iedownloadhistory/.+
+/users/.+/appdata/local/microsoft/windows/inetcache/.+
+/users/.+/appdata/local/microsoft/windows/inetcookies/.+
+/users/.+/appdata/local/packages/*/ac/inetcache/.+
+/users/.+/appdata/local/packages/*/ac/inetcookies/.+
+/users/.+/appdata/local/packages/*/ac/inethistory/.+
+/users/.+/appdata/local/microsoft/windows/roamingtiles/.+
+/users/.+/appdata/local/microsoft/windows/temporary internet files/.+
+/users/.+/appdata/local/microsoft/windows/temporary internet files/content.ie5/index[.]dat
+/users/.+/appdata/local/microsoft/windows/temporary internet files/low/content.ie5/index[.]dat
+/users/.+/appdata/local/microsoft/windows/webcache.*
+/users/.+/appdata/local/microsoft/windows/webcache/.+[.]dat
+/users/.+/appdata/local/packages/microsoft.microsoftedge.+/.+
+/users/.+/appdata/roaming/macromedia/flashplayer/[#]sharedobjects/.+/.+/.+[.]sol
+/users/.+/appdata/roaming/microsoft/internet explorer/.+
+/users/.+/appdata/roaming/microsoft/office/recent/index.dat
+/users/.+/appdata/roaming/microsoft/windows/cookies/index[.]dat
+/users/.+/appdata/roaming/microsoft/windows/cookies/low/index[.]dat
+/users/.+/appdata/roaming/mozilla/firefox/profiles/.+/.+[.]sqlite
+/users/.+/appdata/opera.+
+# SRUM DB
+/windows.*/system32/sru/.+
+# IIS Logs
+/windows.*/system32/logfiles/w3svc.*/.+log
+/inetpub/logs/logfiles/.+log
+/inetpub/logs/logfiles/w3svc.*/.+log
+/resources/directory/.+/logfiles/web/w3svc.*/.+log
+# MS SQL ErrorLogs
+/program files/microsoft sql server/.+/mssql/log/errorlog.*
+# NGINX Log Files
+/nginx/logs/.+log
+# PowerShell Console Log
+/users/.+/appdata/roaming/microsoft/windows/powershell/psreadline/consolehost_history.txt
+# WindowsPowerShellDefaultProfiles
+/windows.*/system32/windows­powershell/v1.0/profile.ps1
+/windows.*/system32/windows­powershell/v1.0/microsoft.powershell_profile.ps1
+/documents and settings/.+/documents/windowspowershell/profile.ps1
+/documents and settings/.+/documents/windowspowershell/microsoft.powershell_profile.ps1
+# LinuxOnWindowsProfileFiles
+/users/.+/appdata/local/packages/.+/localstate/rootfs/home/.+/.bash_history
+/users/.+/appdata/local/packages/.+/localstate/rootfs/home/.+/.bash_logout
+/users/.+/appdata/local/packages/.+/localstate/rootfs/home/.+/.bashrc
+/users/.+/appdata/local/packages/.+/localstate/rootfs/home/.+/.profile
+## Anti-malware logs
+/documents and settings/all users/application data/avast software/avast/log.*
+/programdata/avast software/avast/log.*
+/users/.+/avast software/avast/log.*
+/programdata/avast software/avast/chest/index.xml
+/programdata/avira/antivirus/logfiles.*
+/programdata/bitdefender/endpoint security/logs/.+
+/combofix.txt
+/documents and settings/all users/application data/eset/eset nod32 antivirus/logs/.+
+/programdata/eset/eset nod32 antivirus/logs/.+
+/programdata/f-secure/log/.+
+/users/.+/appdata/local/f-secure/log/.+
+/programdata/f-secure/antivirus/scheduledscanreports/.+
+/programdata/hitmanpro/logs.*
+/programdata/hitmanpro.alert/logs.*
+/programdata/hitmanpro.alert/excalibur.db
+/programdata/malwarebytes/malwarebytes anti-malware/logs/.+
+/programdata/malwarebytes/mbamservice/logs/mbamservice.log
+/users/.+/appdata/roaming/malwarebytes/malwarebytes anti-malware/logs.*
+/programdata/mcafee/endpoint security/logs.*
+/users/all users/application data/mcafee/desktopprotection.*
+/programdata/mcafee/desktopprotection.*
+/programdata/mcafee/endpoint security/logs.*
+/programdata/mcafee/virusscan/.+
+/programdata/roguekiller/logs/adlicereport.*
+/documents and settings/all users/application data/sophos/sophos.*/logs/.+
+/programdata/sophos/sophos.*/logs/.+
+/users/.+/appdata/roaming/superantispyware/logs/.+
+/documents and settings/all users/application data/symantec/symantec endpoint protection/logs/.+
+/programdata/symantec/symantec endpoint protection/.+/data/logs/.+
+/users/.+/appdata/local/symantec/symantec endpoint protection/logs.*
+/documents and settings/all users/application data/symantec/symantec endpoint protection/quarantine.*
+/programdata/symantec/symantec endpoint protection/.+/data/quarantine.*
+/programdata/trend micro/.+
+/program files*/trend micro/security agent/report/.+
+/program files*/trend micro/security agent/connlog/.+
+/programdata/vipre business agent/logs/.+
+/users/.+/appdata/roaming/vipre business/.+
+/users/.+/appdata/roaming/gfi software/antimalware/logs/.+
+/users/.+/appdata/roaming/sunbelt software/antimalware/logs/.+
+/programdata/microsoft/microsoft antimalware/support/.+
+# Apps
+/users/.+/appdata/local/cisco/unified communications/jabber/csf/history/.+
+/users/.+/appdata/local/realvnc/vncserver.log
+/programdata/ammyy.+
+/users/.+/appdata/local/aspera/aspera connect/var/log/.+
+/users/.+/.aspera/connect/var/log/.+
+/users/.+/box.*/.+
+/users/.+/appdata/local/box/box/.+
+/users/.+/appdata/local/box sync/.+
+/users/.+/appdata/local/cisco/unified communications/jabber/csf/history/*.db
+/atlassian/application data/confluence/logs/.+
+/program files/atlassian/confluence/logs/.+
+/users/.+/appdata/roaming/discord/cache.*
+/users/.+/dropbox.*/.+
+/users/.+/appdata/local/dropbox/info.json
+/users/.+/appdata/local/dropbox/.+/filecache.dbx
+/users/.+/appdata/local/dropbox/.+/config.dbx
+/users/.+/appdata/roaming/microsoft/protect/.+
+/program files/microsoft/exchange server/.+/logging.*
+/program files/microsoft/exchange server/.+/transportroles/logs/.+
+/users/.+/appdata/roaming/filezilla/.+
+/users/.+/appdata/roaming/filezilla/.+
+/users/.+/google drive.*/.+
+/users/.+/appdata/google/drive/.+
+/users/.+/appdata/local/google/drive/.+
+/users/.+/appdata/local/google/drivefs/.+
+/users/.+/appdata/roaming/apple/mobilesync/backup.*
+/users/.+/appdata/roaming/apple computer/mobilesync/backup.*
+/users/.+/appdata/local/sun/java/deployment/cache/.+/.+/.*idx
+/users/.+/appdata/locallow/sun/java/deployment/cache/.+/.+/.*idx
+/windows.*/system32/config/systemprofile/appdata/local/sun/java/deployment/cache/.+/.+/.*idx
+/windows.*/system32/config/systemprofile/appdata/locallow/sun/java/deployment/cache/.+/.+/.*idx
+/windows.*/syswow64/config/systemprofile/appdata/local/sun/java/deployment/cache/.+/.+/.*idx
+/windows.*/syswow64/config/systemprofile/appdata/locallow/sun/java/deployment/cache/.+/.+/.*idx
+/documents and settings/.+/application data/sun/java/deployment/cache/.+/.+/.*idx
+/documents and settings/.+/application data/kaseya/log.*
+/users/.+/appdata/local/kaseya/log/kaseyaliveconnect.*
+/documents and settings/all users/application data/kaseya/log/endpoint.*
+/programdata/kaseya/log/endpoint.*
+/program files*/kaseya/.+/agentmon.*
+/users/.+/appdata/local/temp/kasetup.log
+/windows.*/temp/kasetup.log
+/programdata/logmein/logs.*
+/users/.+/appdata/local/temp/logmeinlogs.*
+/users/.+/appdata/roaming/notepad++/backup.*
+/program files*/screenconnect/app_data/session.db
+/program files*/screenconnect/app_data/user.xml
+/users/.+/appdata/local/packages/microsoft.skypeapp.*/localstate/.+/main.db
+/users/.+/appdata/local/packages/microsoft.skypeapp.*/localstate/.+/skype.db
+/documents and settings/.+/application data/skype/.+/main.db
+/users/.+/appdata/roaming/skype/.+/main.db
+/users/.+/appdata/local/packages/microsoft.skypeapp.*/localstate/.+
+/users/.+/appdata/roaming/microsoft/skype for desktop/indexeddb/.*leveldb/.*log
+/users/.+/onedrive.*/.+
+/users/.+/appdata/local/microsoft/onedrive/logs/.+
+/users/.+/appdata/local/microsoft/onedrive/settings/.+
+/users/.+/appdata/microsoft/skydrive/logs/.+log
+/users/.+/appdata/microsoft/skydrive/setup/logs/.+log
+/users/.+/appdata/microsoft/skydrive/settings/.+
+/program files.*/teamviewer/connections.*
+/program files.*/teamviewer/teamviewer.+logfile.*
+/users/.+/appdata/roaming/teamviewer/mru/remotesupport.*
+/users/.+/appdata/roaming/teracopy.*
+/users/.+/appdata/local/realvnc/vncserver.log
+# SCCM logs
+/windows.*/system32/ccm/logs.+
+/windows.*/syswow64/ccm/logs.+
