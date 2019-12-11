@@ -1,6 +1,6 @@
 /(?!(^windows.*|^[$]windows.*|^users|^intel|^dell|^esd|^msocache|^drivers|^recovery|^pastel.*|^program.+)).+
 /windows/(?!(^assembly|^boot|^branding|^cursors|^debug|^diagnostics|^ehome|^..-.+|^fonts|^globalization|^help|^ime|^inf|^l2schemas|^media|^microsoft.+|^migration|^performance|^pla|^policydefinitions|^rescache|systemresources|resources|shellexperiences|elambkup|modemlogs|shellcomponents|addins|appreadiness|skb|ocr|^immersive.+|^input.*|^print.*|schemas|servicing|softwaredistribution|^speech|^system32|^twain_32|^web|^winsxs|^syswow64|^sxsback|systemapps)).*
-/windows/system32/(?!(^boot|^backupfiles|^catroot|^dism|^driverstore|^..-.+|^ime|^migwiz|^manifeststore|^oobe|^speech|^spool|^spp|^wbem|^drivers|^softwaredistribution)).*
+/windows/system32/(?!(^boot|^backupfiles|^catroot|^dism|^driverstore|^..-.+|^ime|^migwiz|^manifeststore|^oobe|^speech|^spool|^spp|^wbem|^winevt|^drivers|^softwaredistribution)).*
 /users/.+/(?!(appdata)).*
 /users/.+/appdata/.+/(?!(^packages|^microsoft|^adobe|^apple)).*
 /users/.+/appdata/.+/microsoft/(?!(^input))/(?!(^notifications|^tiles)).*
